@@ -1,0 +1,165 @@
+include figures.pug
+
+mixin gethRecipe(header)
+  if header
+    h2 #{header}
+
+  .row
+    .col-md-6
+      h3 Install and run the 
+        strong Command Line Interface
+      p We've built 
+        a(href='https://github.com/ethereum/mist/releases/latest') easy to use graphical tools
+        | , but if you are a developer you probably want to install the command line tools.
+
+    .col-md-6
+      +gethFigure
+
+  .row
+    .col-md-6
+      a(href="/cli").button Install the Command line tools
+    
+    .col-md-6
+      .recipe
+        h4 You'll need:
+        ul
+          li 
+            Basic command line skills 
+          li 
+            Basic coding skills
+          li 
+            1-2 GB free space for the blockchain
+
+mixin etherRecipe(header)
+  if header
+    h2 #{header}
+
+  .row
+    .col-md-6
+      h3 Learn about the ether, the crypto-fuel of the Ethereum network
+      
+      p Ether is the internal 'fuel' of Ethereum. Programs running on Ethereum need to pay the network for the resources they consume. Volunteers earn this ether by validating transactions, securing the network.
+
+      p Alternatively, if you participated in the presale to fund Ethereum's development, or won a reward from the Olympic or 
+        a(href="https://bounty.ethdev.com/") Bug Bounty 
+        | programs, you will have a wallet file (.json) that can be imported and give you access to your ether.
+    
+      p You can also get some from a friend or purchase it online.
+
+    .col-md-6
+      +etherFigure
+
+  .row
+    .col-md-6
+      a(href="/ether").button Learn about ether 
+    
+    .col-md-6
+      .recipe
+        h4 You will:
+        ul
+          li Learn what ether is and how many exist
+          li Import your presale wallet
+          li Learn how to send transactions using the command line
+
+mixin greeterRecipe(header)
+  if header
+    h2 #{header}
+
+  .row
+    .col-md-6
+      h3 Physical assets on the chain
+
+      p FFF Asset Chain develops a new NFT system based on blockchain technology. Each NFT has a unique id.
+
+      p FFF Asset Chain allows each NFT to be linked to physical assets, such as real estate, jewelry, gold, and physical support for yachts. After the physical assets are on the chain, they are minted into NFTs, which reshape the real value of NFTs and are no longer virtual NFTs. Finance Future Factory develops the FFF asset chain and is committed to converting novel physical assets into digital assets to realize the upgrade of digital finance.
+
+    .col-md-6
+      +greeterFigure
+
+mixin tokenRecipe(header)
+  if header
+    h2 #{header}
+
+  .row
+    .col-md-6
+
+      p Inflation is a sustained, general, and irreversible rise in the prices of major commodities. On the other hand, the local currency depreciates, and the purchasing power of the currency continues to decline. Inflation means that there are more and more currencies circulating in the market, and the increment of goods cannot keep up with the increment of currency, so the currency becomes less and less valuable. After the collapse of the Bretton Woods system, the global trading system is now settled in US dollars, and the US dollar is pegged to the exchange rate. However, the US government and the governments of various countries cannot restrain their urge to print money, resulting in the continuous devaluation of the currency.
+
+      p The establishment goal of the FFF asset chain is to put real assets on the chain, and the gold standard token EURCO is used as the unit of measurement. EURCO is the standard token that anchors the gold value target, so EURCO is not affected by inflation, and will not be affected by inflation. Money causes the value of the token to depreciate.
+    .col-md-6
+      +tokenFigure
+
+mixin crowdsaleRecipe(header)
+  if header
+    h2 #{header}
+
+  .row
+    .col-md-6
+      +crowdsaleFigure
+    
+    .col-md-6
+      h3 Physical assets on the chain
+
+      p FFF Asset Chain develops a new NFT system based on blockchain technology. Each NFT has a unique id.
+
+      p FFF Asset Chain allows each NFT to be linked to physical assets, such as real estate, jewelry, gold, and physical support for yachts. After the physical assets are on the chain, they are minted into NFTs, which reshape the real value of NFTs and are no longer virtual NFTs. Finance Future Factory develops the FFF asset chain and is committed to converting novel physical assets into digital assets to realize the upgrade of digital finance.
+
+
+
+mixin daoRecipe(header)
+  if header
+    h2 #{header}
+
+  .row
+    .col-md-6
+      +daoFigure
+
+    .col-md-6
+      h3 Build WEB3 DAPP
+
+      p FFF Asset Chain is also an open, programmable smart contract platform for decentralized applications, allowing developers around the world to participate in building WEB3 DAPP
+
+      p applications, instantly confirm transactions and process thousands of transactions per second, far exceeding any Decentralized blockchain platform. Developers can build applications
+
+      p linked to real assets at a very low cost, quickly, safely and efficiently, and use the gold-denominated token EURCO as the underlying currency to form a new financial system.
+
+mixin futureRecipe(header)
+  if header
+    h2 #{header}
+
+  .col-md-12.community
+    h3 Ecosystem ↗
+
+  .row
+    .col-md-3
+      a(href="/cli").button
+        i.fa.fa-internet-explorer
+          |  FFF Asset Chain Explore
+    .col-md-3
+      a(href="/cli").button
+        i.fa.fa-mobile
+          |  3FSwap Dapp
+
+    .col-md-3
+      a(href="/cli").button
+        i.fa.fa-google-wallet
+          |  WalletMan (Decentrailzed APP)
+
+    .col-md-3
+      a(href="/cli").button
+        i.fa.fa-chrome
+          |  WalletMan (Browser Plugin)
+
+mixin toc()
+  ul#table-of-contents.toc.animateme(data-when="enter", data-from="0.4", data-to="0.2", data-translatex="-100", data-opacity="0", data-easing="linear")
+
+mixin inner-header(title)
+  .inner-header.default-header.scrollme(class!=attributes.class)
+    .breadcrumb.animateme(data-when="exit", data-from="1", data-to="0.8", data-opacity="0", data-translatey="-20") 
+      a(href="/").index Ethereum  
+      | »  
+      strong #{title} 
+    a(href="/").back « Main page
+    figure.ethereum-logo.animateme(data-when="exit", data-from="0", data-to="1", data-translatey="120", data-opacity="0.5", data-scale="0.6", data-easing="linear")
+
+    h3.text-center.animateme(data-when="exit", data-from="0", data-to="0.5", data-translatey="30", data-opacity="0", data-scale="0.7", data-easing="linear")  #{title} 

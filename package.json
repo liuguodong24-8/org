@@ -1,0 +1,55 @@
+{
+  "name": "ethereum.org",
+  "description": "Ethereum website",
+  "version": "2.0.1",
+  "private": true,
+  "engines": {
+    "node": "6.0.0",
+    "npm": "3.8.6"
+  },
+  "scripts": {
+    "build": "grunt",
+    "start": "node ./bin/www",
+    "start:dist": "http-server dist/",
+    "check-links": "http-server dist/ --silent & blc http://localhost:8080 -rg"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "debug": "3.1.0",
+    "express": "^4.16.3",
+    "http-server": "^0.11.1",
+    "jstransformer-markdown-it": "^2.0.0",
+    "markdown": "latest",
+    "markdown-it-include": "0.0.2",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ethereum/ethereum-org"
+  },
+  "homepage": "https://github.com/ethereum/ethereum-org",
+  "bugs": {
+    "url": "https://github.com/ethereum/ethereum-org/issues"
+  },
+  "authors": [
+    {
+      "name": "Ethereum Team",
+      "email": "info@ethereum.org",
+      "url": "https://github.com/ethereum"
+    }
+  ],
+  "license": "LGPL-3.0",
+  "devDependencies": {
+    "broken-link-checker": "^0.7.8",
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-http": "^2.3.1"
+  }
+}
